@@ -1,0 +1,125 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+
+#menuItems {
+    width: 220px;
+    height: 100vh;
+    background: #333;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+#menuItems button {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+#menuItems button:hover {
+    background: #777;
+}
+
+
+#jumpMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #eee;
+    display: none;
+}
+
+
+#menuItems:hover #jumpMenu {
+    display: block;
+}
+
+#jumpMenu li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+#jumpMenu li a:hover {
+    background: #333;
+    color: white;
+}
+
+
+main {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 24px;
+    z-index: 10;
+}
+
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article {
+    width: 300px;
+    padding: 15px;
+    background: #f5f5f5;
+    color: #aaa;
+    transition: color 2s, transform 2s;
+}
+
+article:hover {
+    color: #222;
+    transform: scale(1.05);
+}
+
+article p:first-of-type::first-letter {
+    font-family: "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+article a[href*="google.com"]::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    background-size: contain;
+}
+
+article a {
+    color: blue;
+}
+
+
+#thanks {
+    margin-top: 40px;
+}
